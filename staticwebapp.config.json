@@ -1,6 +1,9 @@
 {
   "navigationFallback": {
-    "rewrite": "/index.html"
+    "rewrite": "/index.html",
+    "exclude": [
+      "/ai-readiness/*"
+    ]
   },
   "globalHeaders": {
     "X-Content-Type-Options": "nosniff",
@@ -10,5 +13,11 @@
   },
   "mimeTypes": {
     ".html": "text/html; charset=utf-8"
-  }
+  },
+  "routes": [
+    {
+      "route": "/ai-readiness",
+      "rewrite": "/ai-readiness/index.html"
+    }
+  ]
 }
